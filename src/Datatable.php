@@ -29,8 +29,8 @@ class Datatable
                     $relationship = $model->$relation();
                     $relationTableName = $relationship->getRelated()->getTable();
                     $foreignKey = $relationship->getQualifiedForeignKeyName();
-                    $ownerKey = $model->getOwnerKey($relationship);
-                    $colName = $model->getColName(request('sort'));
+                    $ownerKey = $this->getOwnerKey($relationship);
+                    $colName = $this->getColName(request('sort'));
                     $builder->leftJoin($relationTableName,$foreignKey,'=',$ownerKey)
                             ->addSelect($tableName.'.id as id')
                             ->addSelect($relationTableName.'.id as '.$relationTableName.'_id')
