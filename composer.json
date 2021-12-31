@@ -1,5 +1,5 @@
 {
-    "name": "shaun/open-inertia-datatable-laravel",
+    "name": "shaungoh01/open-inertia-datatable-laravel",
     "homepage": "https://thelorry.com",
     "description": "A simple Laravel 5/6/7/8 service provider for building datatable for inertiaJS.",
     "type": "library",
