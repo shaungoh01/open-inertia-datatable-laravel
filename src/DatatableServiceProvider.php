@@ -29,5 +29,10 @@ class DatatableServiceProvider extends ServiceProvider
             $dt = new Datatable($model);
             return $dt->datatableQuery($this,$relations);
         });
+
+        $this->publishes([
+            __DIR__ . '/../Vue/Datatable' => resource_path('js/InertiaDatatable'),
+            'DatatableVuejs'
+        ]);
     }
 }
