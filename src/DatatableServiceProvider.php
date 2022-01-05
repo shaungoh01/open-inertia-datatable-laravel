@@ -31,8 +31,7 @@ class DatatableServiceProvider extends ServiceProvider
         });
 
         $this->publishes([
-            __DIR__ . '/../Vue/Datatable' => resource_path('js/InertiaDatatable'),
-            'DatatableVuejs'
-        ]);
+            __DIR__ . '/../Vue/Datatable' => resource_path('js/InertiaDatatable')
+        ], 'datatable-vuejs');
     }
 }
