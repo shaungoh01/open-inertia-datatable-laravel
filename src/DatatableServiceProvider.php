@@ -24,7 +24,7 @@ class DatatableServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Builder::macro('datatable', function (Array $relations) {
+        Builder::macro('datatable', function (Array $relations = []) {
             $model = $this->getModel();
             $dt = new Datatable($model);
             return $dt->datatableQuery($this,$relations);
